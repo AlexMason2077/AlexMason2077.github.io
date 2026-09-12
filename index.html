@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#1949dc">
+  <title>Zirui (Alex) Zhou · University of Sydney</title>
+  <meta name="description" content="Zirui (Alex) Zhou is an Honours student at the University of Sydney working on drone swarms, LLM agents, and graph representation learning.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zirui (Alex) Zhou · Research & Projects">
+  <meta property="og:description" content="Honours student in Computer Science and Mathematics at the University of Sydney. Research in drone swarms, AI agents, and graph learning.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231949dc'/%3E%3Cpath d='M18 19h28L18 45h28' fill='none' stroke='white' stroke-width='7' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink: #152131;
+      --muted: #536175;
+      --blue: #1949dc;
+      --line: #dce2eb;
+      --paper: #fff;
+      --tint: #f3f6fc;
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 1rem; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    ::selection { background: #d9e3ff; color: var(--ink); }
+    a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: .22em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-radius: 2px; }
+    p, h1, h2, h3, h4, ul, dl, figure { margin: 0; }
+    p + p { margin-top: 1rem; }
+    .container { width: min(74rem, calc(100% - 6rem)); margin-inline: auto; }
+    .skip-link { position: fixed; top: .5rem; left: .5rem; transform: translateY(-150%); background: var(--ink); color: #fff; padding: .65rem 1rem; z-index: 20; }
+    .skip-link:focus { transform: translateY(0); }
+    .topbar { border-bottom: 1px solid var(--line); }
+    .topbar-inner { min-height: 5.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .brand { display: inline-flex; align-items: center; gap: .85rem; color: var(--ink); font-weight: 650; text-decoration: none; letter-spacing: -.02em; }
+    .brand-mark { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; background: var(--blue); color: #fff; font-size: 1.15rem; font-weight: 700; }
+    .topnav { display: flex; align-items: center; flex-wrap: wrap; gap: 1.7rem; }
+    .topnav a { color: var(--muted); font-size: .875rem; text-decoration: none; padding-block: .65rem; }
+    .topnav a:hover { color: var(--blue); text-decoration: underline; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 17.5rem; gap: 5rem; padding: 5.25rem 0 4.6rem; }
+    .eyebrow { font-size: .8125rem; font-weight: 650; letter-spacing: .13em; text-transform: uppercase; color: var(--blue); }
+    h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(3.5rem, 6.6vw, 5.7rem); line-height: 1.13; letter-spacing: -.058em; margin: .75rem 0 .45rem; }
+    .name-note { color: var(--muted); font-size: 1rem; }
+    .intro { margin-top: 1.7rem; max-width: 42rem; font-size: 1.13rem; line-height: 1.8; }
+    .intro strong { font-weight: 600; }
+    .secondary-intro { max-width: 42rem; color: var(--muted); }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 1rem 1.8rem; margin-top: 1.8rem; }
+    .contact-links a { display: inline-flex; align-items: center; gap: .55rem; font-size: .9375rem; font-weight: 550; }
+    .icon { width: 1.1rem; height: 1.1rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .hero-aside { align-self: start; padding: 1.7rem 0 0 1.75rem; border-left: 2px solid var(--blue); margin-top: .15rem; }
+    .aside-label { font-size: .8125rem; color: var(--muted); letter-spacing: .09em; text-transform: uppercase; margin-bottom: .85rem; }
+    .interest-list { padding: 0; list-style: none; font-family: var(--serif); font-size: 1.45rem; line-height: 1.4; }
+    .interest-list li + li { margin-top: .9rem; }
+    .aside-details { margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; line-height: 1.7; }
+    .aside-details strong { color: var(--ink); display: block; font-weight: 600; margin-bottom: .3rem; }
+    .page-section { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 3rem; padding: 3.6rem 0; border-top: 1px solid var(--line); }
+    .section-heading { align-self: start; }
+    .section-number { display: block; color: var(--blue); font-size: .8125rem; letter-spacing: .1em; margin-bottom: .6rem; font-weight: 600; }
+    h2 { font-family: var(--serif); font-weight: 400; font-size: 1.9rem; letter-spacing: -.035em; line-height: 1.2; }
+    .section-heading p { color: var(--muted); font-size: .875rem; line-height: 1.6; margin-top: .9rem; }
+    .research-item + .research-item { border-top: 1px solid var(--line); margin-top: 2.5rem; padding-top: 2.5rem; }
+    .item-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .35rem 1.5rem; margin-bottom: .75rem; font-size: .8125rem; color: var(--muted); }
+    .item-meta .org { color: var(--blue); font-weight: 650; }
+    h3 { font-size: 1.375rem; line-height: 1.4; font-weight: 620; letter-spacing: -.025em; }
+    .supervisor { color: var(--muted); font-size: .875rem; margin-top: .4rem; }
+    .item-body { margin-top: 1rem; }
+    .item-body p { max-width: 52rem; }
+    .contributions { margin-top: .9rem; padding-left: 1.15rem; }
+    .contributions li { padding-left: .2rem; }
+    .contributions li + li { margin-top: .4rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .5rem 1.15rem; margin-top: 1.15rem; color: var(--muted); font-size: .8125rem; }
+    .tags span { border-bottom: 1px solid var(--line); padding-bottom: .1rem; }
+    .result-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; background: var(--tint); padding: 1.1rem 1.35rem; margin-top: 1.25rem; }
+    .result-strip dt { color: var(--muted); font-size: .8125rem; }
+    .result-strip dd { margin: .1rem 0 0; font-size: 1.45rem; color: var(--ink); letter-spacing: -.025em; font-variant-numeric: tabular-nums; }
+    .result-strip dd strong { color: var(--blue); font-weight: 600; }
+    .result-strip dd span { color: var(--muted); font-size: 1rem; margin-inline: .3rem; }
+    .result-note { margin-top: .5rem; color: var(--muted); font-size: .8125rem; }
+    .manuscript { border-left: 2px solid var(--blue); padding-left: 1.5rem; }
+    .status { display: inline-block; color: var(--blue); background: var(--tint); padding: .2rem .65rem; margin-bottom: .9rem; font-size: .8125rem; font-weight: 600; }
+    .paper-title { font-family: var(--serif); font-size: 1.55rem; font-weight: 400; letter-spacing: -.01em; line-height: 1.45; }
+    .authors { color: var(--muted); margin-top: .9rem; font-size: .9375rem; }
+    .authors strong { color: var(--ink); font-weight: 600; }
+    .venue { color: var(--muted); font-size: .875rem; margin-top: .5rem; }
+    .work-row { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 2rem; }
+    .work-row + .work-row { margin-top: 2.1rem; padding-top: 2.1rem; border-top: 1px solid var(--line); }
+    .work-time { color: var(--muted); font-size: .8125rem; line-height: 1.6; padding-top: .2rem; }
+    .work-time span { display: block; margin-top: .25rem; }
+    .work-copy h3 { font-size: 1.12rem; }
+    .work-org { font-size: .9375rem; color: var(--blue); margin-top: .25rem; }
+    .work-copy p { margin-top: .6rem; }
+    .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .project { border-top: 2px solid var(--ink); padding-top: 1rem; }
+    .project h3 { font-size: 1.15rem; }
+    .project-meta { color: var(--muted); font-size: .8125rem; margin-top: .55rem; }
+    .project p { margin-top: .85rem; }
+    .education h3 { font-size: 1.35rem; }
+    .degree { margin-top: .5rem; }
+    .education-meta { color: var(--muted); margin-top: .5rem; font-size: .9375rem; }
+    .awards { margin-top: 1.6rem; display: grid; grid-template-columns: 1fr 1fr; gap: .5rem 1.5rem; padding: 0; list-style: none; }
+    .awards li { font-size: .9375rem; }
+    .awards .year { color: var(--blue); font-size: .8125rem; display: block; }
+    .skills { margin-top: 2.3rem; padding-top: 1.7rem; border-top: 1px solid var(--line); }
+    .skills h4 { font-size: 1rem; font-weight: 600; margin-bottom: 1rem; }
+    .skill-row { display: grid; grid-template-columns: 10rem minmax(0,1fr); gap: 1.25rem; font-size: .9375rem; }
+    .skill-row + .skill-row { margin-top: .75rem; }
+    .skill-row dt { color: var(--muted); }
+    .skill-row dd { margin: 0; }
+    .footer { margin-top: 1rem; border-top: 1px solid var(--line); }
+    .footer-inner { padding-block: 2rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; font-size: .8125rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+    .footer-links a { overflow-wrap: anywhere; }
+    @media (min-width: 1000px) { .section-heading { position: sticky; top: 2rem; } }
+    @media (max-width: 1000px) {
+      .container { width: min(100% - 3rem, 74rem); }
+      .hero { gap: 2.5rem; grid-template-columns: minmax(0,1fr) 14rem; }
+      .page-section { grid-template-columns: 9rem minmax(0,1fr); gap: 2rem; }
+      .work-row { grid-template-columns: 7rem minmax(0,1fr); gap: 1.4rem; }
+      .project-grid { gap: 1.7rem; }
+    }
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 1.5rem; }
+      .container { width: calc(100% - 2.5rem); }
+      .topbar-inner { gap: .75rem; min-height: 5rem; flex-wrap: wrap; padding-block: 1rem; }
+      .topnav { gap: 1rem; }
+      .topnav a { padding-block: .25rem; }
+      .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3.2rem 0 3rem; }
+      h1 { font-size: clamp(3.5rem, 10vw, 5rem); }
+      .intro { font-size: 1.0625rem; }
+      .hero-aside { border-left: 0; border-top: 1px solid var(--line); padding: 1.5rem 0 0; margin: 0; }
+      .interest-list { font-family: var(--sans); font-size: .9375rem; display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; }
+      .interest-list li + li { margin: 0; }
+      .aside-details { display: none; }
+      .page-section { grid-template-columns: 1fr; gap: 1.8rem; padding-block: 2.7rem; }
+      .section-heading { display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; }
+      .section-number { margin: 0; }
+      .section-heading p { width: 100%; margin-top: 0; }
+      h2 { font-size: 1.85rem; }
+      .work-row { grid-template-columns: 1fr; gap: .6rem; }
+      .work-time span { display: inline; margin-left: .7rem; }
+      .project-grid { gap: 2rem; }
+      .skill-row { grid-template-columns: 8rem minmax(0,1fr); gap: 1rem; }
+    }
+    @media (max-width: 490px) {
+      .brand { width: 100%; }
+      .topnav { width: 100%; justify-content: space-between; gap: .6rem; }
+      .topnav a { font-size: .875rem; }
+      .project-grid, .awards { grid-template-columns: 1fr; }
+      .result-strip { grid-template-columns: 1fr; gap: .8rem; }
+      .skill-row { grid-template-columns: 1fr; gap: .1rem; }
+      .manuscript { padding-left: 1rem; }
+      .paper-title { font-size: 1.35rem; }
+      h1 { overflow-wrap: normal; font-size: clamp(2.7rem, 12vw, 3.5rem); }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media print {
+      body { font-size: 10pt; }
+      .container { width: 100%; }
+      .topbar, .skip-link, .hero-aside, .footer-links { display: none; }
+      .hero { display: block; padding: 0 0 1.5rem; }
+      h1 { font-size: 36pt; }
+      .intro { font-size: 11pt; }
+      .page-section { display: block; padding: 1.5rem 0; }
+      .section-heading { position: static; margin-bottom: 1rem; }
+      .section-number { display: none; }
+      h2 { font-size: 18pt; }
+      h3 { font-size: 12pt; }
+      .research-item, .work-row, .project, .manuscript { break-inside: avoid; }
+      a { color: inherit; }
+      .result-strip { border: 1px solid var(--line); }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#about" aria-label="Zirui Zhou, back to introduction"><span class="brand-mark" aria-hidden="true">Z</span>Zirui Zhou</a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#manuscript">Manuscript</a>
+        <a href="#experience">Experience</a>
+        <a href="#background">Background</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section id="about" class="hero" aria-labelledby="name">
+      <div>
+        <p class="eyebrow">University of Sydney · Honours student</p>
+        <h1 id="name">Zirui Zhou</h1>
+        <p class="name-note">Alex <span aria-hidden="true">/</span> <span lang="zh-Hans">周子睿</span></p>
+        <p class="intro">I am an Honours student in <strong>Advanced Computing</strong> at the University of Sydney, majoring in Computer Science and Mathematics. I work on drone swarm coordination, language-model agents, and graph representation learning.</p>
+        <p class="secondary-intro">My Honours research with Prof. Athman Bouguettaya studies how drone swarms can adapt their formation and positioning as operating conditions change. My recent work also includes Self-Harness experiments at Westlake University and graph learning for evidence-centered review in HyperTrace.</p>
+        <div class="contact-links">
+          <a href="mailto:zzho4394@uni.sydney.edu.au"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Email</a>
+          <a href="https://github.com/AlexMason2077"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-10-2 20"/></svg>GitHub</a>
+          <a href="#research">Explore my research <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-label="Research interests and affiliation">
+        <p class="aside-label">Research interests</p>
+        <ul class="interest-list"><li>Multi-drone systems</li><li>Self-improving agents</li><li>Graph learning</li></ul>
+        <div class="aside-details"><strong>Sensors, Clouds, and<br>Services Lab</strong>School of Computer Science<br>University of Sydney<br>Sydney, Australia</div>
+      </aside>
+    </section>
+
+    <section id="research" class="page-section" aria-labelledby="research-title">
+      <div class="section-heading"><span class="section-number">01</span><h2 id="research-title">Research</h2></div>
+      <div>
+        <article class="research-item">
+          <div class="item-meta"><span class="org">University of Sydney · SCS Lab</span><span>Nov 2025 – Present</span></div>
+          <h3>Adaptive formation and positioning for drone swarms</h3>
+          <p class="supervisor">Honours research · Supervisor: Prof. Athman Bouguettaya</p>
+          <div class="item-body">
+            <p>I study energy-aware formation and positioning for swarm-based drone delivery in skyway networks, with the aim of maintaining delivery efficiency under changing wind and charging-resource constraints.</p>
+            <ul class="contributions">
+              <li>Conduct real-world DJI Tello experiments across front, column, vee, echelon, and diamond formations, recording battery levels, flight time, yaw, and position.</li>
+              <li>Design hover baselines and battery-quality checks, and analyze how formation, position, and wind affect energy consumption to inform adaptive decisions.</li>
+            </ul>
+          </div>
+          <div class="tags" aria-label="Topics"><span>Multi-agent coordination</span><span>Energy-aware optimization</span><span>Real-drone experiments</span></div>
+        </article>
+
+        <article class="research-item">
+          <div class="item-meta"><span class="org">Tongji University · Remote collaboration</span><span>Aug – Sep 2026</span></div>
+          <h3>HyperTrace: graph learning for coordinated behavior detection</h3>
+          <p class="supervisor">Collaborative research · Supervisor: Senior Engineer Xiaoliang Gong</p>
+          <div class="item-body">
+            <p>I contributed the detection model and data and evaluation pipelines to HyperTrace, an evidence-centered review system for suspected coordinated information operations on social media.</p>
+            <ul class="contributions">
+              <li>Designed and trained Lorentz-HGT, combining a heterogeneous graph transformer with Lorentz hyperbolic representations.</li>
+              <li>Built consistent graph inputs from simulated and public data, and ran leave-one-scenario-out evaluations across five scenarios with three random seeds.</li>
+            </ul>
+          </div>
+          <dl class="result-strip"><div><dt>Honduras · Mean AUROC</dt><dd><strong>0.8850</strong></dd></div><div><dt>UAE · Mean AUROC</dt><dd><strong>0.9005</strong></dd></div></dl>
+          <p class="result-note">Coordinated-behavior detection with Lorentz-HGT. Associated manuscript submitted to CHI 2027; under review.</p>
+          <div class="tags" aria-label="Topics"><span>Hyperbolic learning</span><span>Heterogeneous graphs</span><span>Human-centered AI</span></div>
+        </article>
+
+        <article class="research-item">
+          <div class="item-meta"><span class="org">Westlake University · MAPLE Lab</span><span>Jul – Aug 2026</span></div>
+          <h3>Self-Harness for language-model agents</h3>
+          <p class="supervisor">Summer research internship · Supervisor: Prof. Guojun Qi</p>
+          <div class="item-body">
+            <p>I reproduced the Self-Harness workflow using GLM-5, benchmarking Deep Agents on Terminal-Bench 2.0 through Harbor. The work examined how an agent can improve the harness through which it operates.</p>
+            <ul class="contributions">
+              <li>Conducted five rounds of candidate generation, benchmarking, and selection using held-in task performance.</li>
+              <li>Built automated evaluation pipelines and investigated agent, API, and verifier timeouts to stabilize the experiments.</li>
+            </ul>
+          </div>
+          <dl class="result-strip"><div><dt>Held-in pass rate</dt><dd>43.8% <span aria-label="increased to">→</span> <strong>56.2%</strong></dd></div><div><dt>Held-out pass rate</dt><dd>37.5% <span aria-label="increased to">→</span> <strong>56.2%</strong></dd></div></dl>
+          <p class="result-note">Initial versus final harness in my GLM-5 reproduction experiments.</p>
+          <div class="tags" aria-label="Topics"><span>LLM agents</span><span>Harness optimization</span><span>Terminal-Bench 2.0</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="manuscript" class="page-section" aria-labelledby="manuscript-title">
+      <div class="section-heading"><span class="section-number">02</span><h2 id="manuscript-title">Manuscript</h2></div>
+      <article class="manuscript">
+        <span class="status">Submitted · Under review</span>
+        <h3 class="paper-title">Beyond the Risk Score: HyperTrace for Evidence-Centered Review of Suspected Coordinated Information Operations</h3>
+        <p class="authors">Xiaoyang, X., <strong>Zhou, Z.</strong>, Song, B., Pan, Z., Gong, X., &amp; Nandi, A.</p>
+        <p class="venue">Submitted to the ACM CHI Conference on Human Factors in Computing Systems (CHI 2027).</p>
+      </article>
+    </section>
+
+    <section id="experience" class="page-section" aria-labelledby="experience-title">
+      <div class="section-heading"><span class="section-number">03</span><h2 id="experience-title">Industry<br>experience</h2></div>
+      <div>
+        <article class="work-row">
+          <div class="work-time">Dec 2025 – Feb 2026<span>Hangzhou, China</span></div>
+          <div class="work-copy"><h3>LLM Training Analyst Intern</h3><div class="work-org">xQuant · Hengtai Technology</div><p>Fine-tuned Qwen3-8B with LoRA for natural-language-to-SQL tasks using ModelScope Swift, and built an NL2SQL agent for enterprise Oracle databases. Redesigned evaluation around SQL execution and business semantics, including column order, ordering intent, time boundaries, and enumeration mappings.</p><div class="tags"><span>Qwen3-8B</span><span>LoRA</span><span>NL2SQL</span><span>Oracle</span></div></div>
+        </article>
+        <article class="work-row">
+          <div class="work-time">Dec 2024 – Feb 2025<span>Shanghai, China</span></div>
+          <div class="work-copy"><h3>Financial Data Analyst Intern</h3><div class="work-org">Opennews · Changwen Technology</div><p>Processed data covering 1,000 mutual funds using Python and SQL. Built cleaning, integration, validation, and visualization workflows, used Kettle for ETL, and supported internal analysis and reporting.</p></div>
+        </article>
+        <article class="work-row">
+          <div class="work-time">Jun – Jul 2024<span>Yangzhou, China</span></div>
+          <div class="work-copy"><h3>Software Development Intern</h3><div class="work-org">Ruifeng Information Technology</div><p>Developed backend modules for agriculture and aquaculture information management with Spring Boot and Spring MVC, covering request handling, data parsing, format conversion, validation, and database persistence.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="page-section" aria-labelledby="projects-title">
+      <div class="section-heading"><span class="section-number">04</span><h2 id="projects-title">Selected<br>projects</h2></div>
+      <div class="project-grid">
+        <article class="project"><h3>VR shopping assessment for rehabilitation</h3><div class="project-meta">University of Sydney · FMH Media Lab<br>Aug – Nov 2025</div><p>Enhanced a VR supermarket prototype for clinical assessment. Improved scene loading, added persistent session configurations and performance reports, and used head orientation and field-of-view proxies to capture scanning behavior.</p><div class="tags"><span>Unity / C#</span><span>VR rehabilitation</span></div></article>
+        <article class="project"><h3>Protein interaction network analysis</h3><div class="project-meta">University of Sydney · Mathematics course project<br>Aug – Nov 2025</div><p>Built protein–protein interaction networks with Python and NetworkX. Applied Louvain community detection, worked with biochemistry researchers on disease-related protein sets, and organized reproducible analysis pipelines and data dictionaries.</p><div class="tags"><span>NetworkX</span><span>Community detection</span></div></article>
+      </div>
+    </section>
+
+    <section id="background" class="page-section" aria-labelledby="background-title">
+      <div class="section-heading"><span class="section-number">05</span><h2 id="background-title">Education<br>&amp; skills</h2></div>
+      <div>
+        <div class="education"><div class="item-meta"><span class="org">Sydney, Australia</span><span>Feb 2023 – Expected Jan 2027</span></div><h3>The University of Sydney</h3><p class="degree">Bachelor of Advanced Computing (Honours)<br>Computer Science &amp; Mathematics</p><p class="education-meta">Weighted Average Mark: <strong>83.55 / 100</strong></p>
+          <ul class="awards"><li><span class="year">2023 &amp; 2025</span>Dean’s List</li><li><span class="year">2024</span>Dalyell Scholar</li><li><span class="year">2023</span>High Distinction Honor Roll</li></ul>
+        </div>
+        <div class="skills"><h4>Technical skills</h4><dl>
+          <div class="skill-row"><dt>Programming</dt><dd>Python, C, Java, SQL, C#</dd></div>
+          <div class="skill-row"><dt>Data &amp; ML</dt><dd>PyTorch, NumPy, Pandas, LoRA fine-tuning, NL2SQL</dd></div>
+          <div class="skill-row"><dt>Backend &amp; systems</dt><dd>Spring Boot, Spring MVC, REST APIs, multithreading, Linux</dd></div>
+          <div class="skill-row"><dt>Databases &amp; ETL</dt><dd>MySQL, PostgreSQL, Oracle, Kettle</dd></div>
+          <div class="skill-row"><dt>Tools</dt><dd>Git, Docker, Unity</dd></div>
+          <div class="skill-row"><dt>Languages</dt><dd>Chinese (native), English (fluent), Japanese (intermediate)</dd></div>
+        </dl></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><p>© 2026 Zirui Zhou <span aria-hidden="true">·</span> Updated September 2026</p><div class="footer-links"><a href="mailto:zzho4394@uni.sydney.edu.au">zzho4394@uni.sydney.edu.au</a><a href="mailto:ziruizhou_apply@163.com">Personal email</a><a href="#about">Back to top ↑</a></div></div></footer>
+</body>
+</html>
